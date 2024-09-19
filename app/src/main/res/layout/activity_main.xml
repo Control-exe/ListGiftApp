@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <!-- Título da lista de presentes -->
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lista de Presentes"
+            android:textSize="24sp"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:padding="8dp" />
+
+        <!-- Campo de texto para nome da pessoa -->
+        <EditText
+            android:id="@+id/recipientNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome da pessoa"
+            android:inputType="textPersonName"
+            android:padding="8dp"
+            android:textSize="18sp" />
+
+        <!-- Valor aproximado do presente -->
+        <TextView
+            android:id="@+id/valueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valor aproximado do presente"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+
+        <NumberPicker
+            android:id="@+id/valuePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minValue="1"
+            android:maxValue="1000" />
+
+        <!-- Data de entrega -->
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data de Entrega"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+
+        <DatePicker
+            android:id="@+id/deliveryDatePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="true" />
+
+        <!-- Progresso da compra -->
+        <TextView
+            android:id="@+id/progressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Progresso da compra"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+
+        <SeekBar
+            android:id="@+id/progressSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100" />
+
+        <!-- Checkbox presente comprado -->
+        <CheckBox
+            android:id="@+id/boughtCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Presente já comprado"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+
+        <!-- Switch de lembretes -->
+        <Switch
+            android:id="@+id/reminderSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ativar lembrete de entrega"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+
+        <!-- Ocasião -->
+        <TextView
+            android:id="@+id/occasionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ocasião"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/occasionRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/birthdayRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aniversário" />
+
+            <RadioButton
+                android:id="@+id/christmasRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Natal" />
+
+            <RadioButton
+                android:id="@+id/otherRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outro" />
+        </RadioGroup>
+
+        <!-- Botão de confirmação -->
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar presente"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>
